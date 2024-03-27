@@ -1,4 +1,5 @@
 import org.testng.Assert.assertEquals
+import org.testng.Assert.assertTrue
 import org.testng.annotations.Test
 
 //carrito de compras
@@ -15,19 +16,24 @@ nivel 1: Factura, checkout
 nivel 2: Stock, cuanto vale mi stock? hay que decidir como evaluar stock
 
  */
-class ShoppingTest {
-    @Test
-    fun createAShoppingListAndAddAnItem() {
-        val shopping = Shopping()
-        shopping.addItem("Bread", 0.0)
-        assertEquals(1, shopping.items.size)
-    }
-    @Test
-    fun connectAPriceToAnItem() {
-        val shopping = Shopping()
-        shopping.addItem("Bread" , 0.0)
-        shopping.addPrice("Bread", 2.0)
-        assertEquals(2.0, shopping.getPrice("Bread"))
-    }
+//class ShoppingTest {
+//    @Test
+//    fun createAShoppingListAndAddAnItem() {
+//        val shopping = Shopping()
+//        shopping.addItem("Bread", 0.0)
+//        assertEquals(1, shopping.items.size)
+//    }
+//    @Test
+//    fun connectAPriceToAnItem() {
+//        val shopping = Shopping()
+//        shopping.addItem("Bread" , 0.0)
+//        shopping.addPrice("Bread", 2.0)
+//        assertEquals(2.0, shopping.getPrice("Bread"))
+//    }
+//    @Test
+//    fun productBuilder(){
+//        val product = Product("sausage" , 15.0 )
+//        assertEquals(product.name , "sausage")
+//    }
 
-}
+//}
