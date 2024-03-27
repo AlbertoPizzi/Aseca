@@ -1,3 +1,3 @@
-data class Product( val name: String) {
+data class Product( val barcode: Int) {
 
 }

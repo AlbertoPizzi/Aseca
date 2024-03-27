@@ -13,7 +13,7 @@ fun test001_CreateAnEmptyShoppingCart(){
 }
     @Test
     fun test002_WhenWantingToAddAnItemToShoppingCartItAddsIt(){
-        val item = Product("Pizza")
+        val item = Product(123)
         val price = Price(20.0)
         val items = mutableMapOf<Product, Price>()
         val shopping = Shopping(items)
@@ -22,7 +22,7 @@ fun test001_CreateAnEmptyShoppingCart(){
     }
     @Test
     fun test003_WhenWantingToDeleteAnItemFromTheShoppingListYouCanAndReturnsEmpty() {
-        val item = Product("Pizza")
+        val item = Product(123)
         val price = Price(20.0)
         val items = mutableMapOf<Product, Price>()
         val shopping = Shopping(items)
@@ -34,10 +34,10 @@ fun test001_CreateAnEmptyShoppingCart(){
     }
     @Test
     fun test004_WhenWantingToAddMoreThan1ItemItLetsYouDoIt() {
-        val item = Product("Pizza")
-        val item2 = Product("Pizza2")
-        val item3 = Product("Pizza3")
-        val item4 = Product("Pizza4")
+        val item = Product(123)
+        val item2 = Product(1234)
+        val item3 = Product(12345)
+        val item4 = Product(123456)
         val price = Price(20.0)
         val items = mutableMapOf<Product, Price>()
         val shopping = Shopping(items)
@@ -50,5 +50,6 @@ fun test001_CreateAnEmptyShoppingCart(){
         assertTrue(shopping.items.containsKey(item3))
         assertTrue(shopping.items.containsKey(item4))
     }
+
 
 }
